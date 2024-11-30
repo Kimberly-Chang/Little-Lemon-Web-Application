@@ -36,6 +36,12 @@ This project was made with Python 3.12, but it may be possible to run this proje
 
 Install project dependencies using `pipenv install`.
 
+### Set Up
 Adjust the `DATABASES` in [settings.py](littlelemon/littlelemon/settings.py) as needed for your database. Then, use `python manage.py migrate` while in the [littlelemon](littlelemon/) folder to update the database to be used for this project. 
 
 The project can then be run with `python manage.py runserver` while in the [littlelemon](littlelemon/) folder.
+
+### Testing
+The Menu model can be tested by running `python manage.py test tests.test_models`. 
+
+The MenuItemsView view can be tested by running `python manage.py test test.test_views`.
