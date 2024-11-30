@@ -11,14 +11,16 @@ def index(request):
     return render(request, 'index.html', {})
 
 class UserViewSet(ModelViewSet):
-   queryset = User.objects.all()
-   serializer_class = UserSerializer
-   permission_classes = [IsAuthenticated] 
+    queryset = User.objects.all()
+    serializer_class = UserSerializer
+    permission_classes = [IsAuthenticated] 
         
 class BookingViewSet(ModelViewSet):
     queryset = Booking.objects.all()
     serializer_class = BookingSerializer
-        
+    permission_classes = [IsAuthenticated] 
+
+
 class MenuItemsView(ListCreateAPIView):
     queryset = Menu.objects.all()
     serializer_class = MenuSerializer
